@@ -1,6 +1,5 @@
 //programma vivodit v fail podmnozhestva dliny k zadannogo chislovogo mnozhestva dliny N
 #include <stdio.h>
-#include <stdlib.h>
 #include "my_functions.h"
 
 int main(void) //Gubenko Olesya 112
@@ -23,7 +22,7 @@ int main(void) //Gubenko Olesya 112
 		printf("Unexpectable error, please try again.\n");
 		return -1;
 	}
-	dN=power2(N); //opredelyaem mnozhestvo, sostoyashee iz vseh chisel, bitovoe predstavleniye kotorikh imeet N znachashih cifr
+	dN=2<<(N-1); //opredelyaem mnozhestvo, sostoyashee iz vseh chisel, bitovoe predstavleniye kotorikh imeet N znachashih cifr
 	for (i=1; i<dN; i++) //dlya kazdogo iz takih chisel proveryaem, skolko v nem 1, i esli ih k, to pechataem podmnozhestvo, s kotorim ustanovleno sootvetstviye
 		raspechatka(i, N, k, fout);
 	fclose(fout);
